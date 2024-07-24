@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hover effect</title>
+
+    <style type="text/css">
+        h1 {
+            --s: 0.1em;   /* the thickness of the line */
+            --c: #1095c1; /* the color */
+
+            color: #0000;
+            padding-bottom: var(--s);
+            background:
+                    linear-gradient(90deg,var(--c) 50%,#000 0) calc(100% - var(--_p,0%))/200% 100%,
+                    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+            -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+            transition: 0.5s;
+        }
+        h1:hover {--_p: 100%}
+
+        h2 {
+            background: url(https://24.media.tumblr.com/tumblr_m87dri70zh1qzla33o1_500.gif);
+            background-size: cover;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;   /* !!! */
+            background-clip: text;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            display: grid;
+            place-content: center;
+        }
+        h1 {
+            font-family: system-ui, sans-serif;
+            font-size: 5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hover Me</h1>
+    <h2>Be Kind</h2>
+</body>
+</html>
